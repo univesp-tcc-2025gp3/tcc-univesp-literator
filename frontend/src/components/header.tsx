@@ -10,6 +10,8 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import { useState } from 'react';
 import { useAuth } from '../contexts/auth-context';
+import { Link } from 'react-router-dom';
+import LocalAtmIcon from '@mui/icons-material/LocalAtm';
 
 
 export function Header() {
@@ -29,14 +31,15 @@ export function Header() {
     <AppBar position="static" sx={{ backgroundColor: '#3B82F6' }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <Typography
+       
+            <Typography
             variant="h6"
             noWrap
             component="a"
-            href="#app-bar-with-responsive-menu"
+            href="/dashboard"
             sx={{
               mr: 2,
-              display: { xs: 'none', md: 'flex' },
+              display: {  md: 'flex' },
               fontFamily: 'monospace',
               fontWeight: 700,
               letterSpacing: '.3rem',
@@ -46,13 +49,22 @@ export function Header() {
           >
             LITERATOR
           </Typography>
+     
 
         
          
          
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }} />
 
-          <Box sx={{ flexGrow: 0 }}>
+          <div className='flex items-center gap-4'>
+            <Link to="/admin">
+              <Tooltip title="Monetização">
+                <IconButton>
+                  <LocalAtmIcon sx={{ color: '#FFF' }} />
+                </IconButton>
+              </Tooltip>
+            </Link>
+            <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Abrir configurações">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
                 <div className='flex items-center gap-2 justify-center'>
@@ -86,6 +98,8 @@ export function Header() {
               
             </Menu>
           </Box>
+
+          </div>
         </Toolbar>
       </Container>
     </AppBar>

@@ -21,7 +21,7 @@ export function Login() {
         <div className="flex flex-col gap-4"> 
           <div className="flex flex-col gap-2 max-sm:text-center">
             <h1 className="text-5xl font-bold text-gray-800 max-sm:text-2xl">Bem-vindo ao <span className="text-blue-500 uppercase">Literator</span></h1>
-            <p className="text-lg text-gray-600">O Literator é um aplicativo inovador voltado para a gestão de acervos literários pessoais e institucionais, combinando organização de livros com recomendações inteligentes baseadas em dados de mercado. Desenvolvido para o público brasileiro, a plataforma surge como uma solução para a dificuldade de organizar livros e descobrir novas leituras em meio ao crescente cenário digital.</p>
+            <p className="text-lg text-gray-600">Descubra sua próxima leitura favorita. Nosso software de recomendação usa inteligência artificial para analisar seus gostos e sugerir livros que você realmente vai amar. Pare de procurar, comece a ler!</p>
           </div>
           <button onClick={login} className="bg-blue-500 text-white font-bold py-2 px-4 rounded cursor-pointer hover:bg-blue-700 transition duration-300 w-[280px] max-sm:w-full">
           Entrar com conta Google
